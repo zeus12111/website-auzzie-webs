@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Auzzie Websites: websites for Australian tradies</title>
-<meta name="description" content="Hand-coded, mobile-first sites for plumbers, sparkies, builders and other trades that rank on Google and get quoted by AI search. From $600 AUD.">
+<meta name="description" content="Hand-coded, mobile-first sites for plumbers, sparkies, builders and other trades that rank on Google and get quoted by AI search. From $699 AUD.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Auzzie Websites: websites for Australian tradies">
-<meta property="og:description" content="Hand-coded sites from $600 AUD that load fast on a phone and get found on Google and AI search.">
+<meta property="og:description" content="Hand-coded sites from $699 AUD that load fast on a phone and get found on Google and AI search.">
 <meta property="og:url" content="https://auzziewebsites.com/">
 <meta property="og:image" content="https://auzziewebsites.com/share.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -76,6 +76,9 @@
   #packages.ground-inverse .checks li::before { background-color: var(--p-inv-accent); }
   #statement .mo-wh__text strong { color: var(--p-inv-accent); }
   .plan__badge { background: var(--p-inv-accent); color: var(--p-inv-accent-ink); }
+  .contact-links { display: grid; gap: var(--s-3); list-style: none; margin: 0; padding: 0; }
+  .contact-links a { display: inline-flex; align-items: center; min-height: 44px; }
+  .contact-links--row { display: flex; flex-wrap: wrap; gap: 0 var(--s-6); margin-top: var(--s-4); }
   ::selection { background: var(--p-ink); color: var(--p-bg); }
   @media (max-width: 639px) {
     #work .panel { --p-h: 300px; }
@@ -107,7 +110,7 @@
             <a class="menu-card span-4" href="#packages">
               <div class="panel"><img class="frame__img" src="assets/img/photo-f63507559-500.jpg" alt="A blocklayer laying concrete blocks on a wall" loading="eager"></div>
               <span class="t-card">Groundwork</span>
-              <span class="t-small muted">Up to 3 pages, $600</span>
+              <span class="t-small muted">Up to 3 pages, $699</span>
             </a>
             <a class="menu-card span-4" href="#packages">
               <div class="panel"><img class="frame__img" src="assets/img/photo-f191900053-500.jpg" alt="A gardener pushing a lawnmower past a hedge" loading="eager"></div>
@@ -139,7 +142,7 @@
     <div class="wrap"><div class="hero-text grid hero__grid">
       <div class="hero__text span-5">
         <h1 id="hero-h">Websites for Australian <span class="hl">tradies</span></h1>
-        <p class="hero__lead">For plumbers, sparkies, builders and every trade in between: a hand-coded site that loads fast on a phone and ranks on Google. From $600 AUD, one-off.</p>
+        <p class="hero__lead">For plumbers, sparkies, builders and every trade in between: a hand-coded site that loads fast on a phone and ranks on Google. From $699 AUD, one-off.</p>
         <div class="btn-row"><a class="btn btn--primary" href="#quote">Get a quote<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a><a class="btn btn--secondary" href="#packages">See the packages</a></div>
       </div>
       <div class="hero__media span-6 start-7">
@@ -216,7 +219,7 @@
         <article class="card card--plan span-4">
           <h3>Groundwork</h3>
           <p>Get online and look professional. Up to 3 pages, 7 days to build.</p>
-          <p class="price"><span class="t-stat">$600</span><span class="plan__meta">AUD, one-off</span></p>
+          <p class="price"><span class="t-stat">$699</span><span class="plan__meta">AUD, one-off</span></p>
           <a class="btn btn--secondary" href="#quote">Ask about Groundwork</a>
           <ul class="checks">
             <li>Mobile-first, hand-coded in Astro</li>
@@ -288,12 +291,16 @@
     </div>
   </section>
 
-  <section class="section" id="questions" aria-labelledby="questions-h">
+  <section class="section" id="questions" style="--hm: 2" aria-labelledby="questions-h">
     <div class="wrap grid">
       <div class="span-5 stack-4">
         <h2 id="questions-h">Questions about the packages</h2>
-        <p>Something else on your mind? Write to us and we will answer it.</p>
-        <p><a class="link" href="mailto:hello@auzziewebsites.example">Email us</a></p>
+        <p>Something else on your mind? Call, message or write to us.</p>
+        <ul class="contact-links">
+          <li><a class="link" href="tel:+61488852926">Call 0488 852 926</a></li>
+          <li><a class="link" href="https://wa.me/639202359482">WhatsApp or Viber +63 920 235 9482</a></li>
+          <li><a class="link" href="mailto:hello@auzziewebsites.example">Email us</a></li>
+        </ul>
       </div>
       <div class="faq span-6 start-7">
         <div class="faq__item"><h3>Do I own the website?</h3><p>Yes. Every package is yours to keep, with no template licence or platform you are locked into.</p></div>
@@ -305,12 +312,16 @@
     </div>
   </section>
 
-  <section class="section" id="quote" aria-labelledby="quote-h">
+  <section class="section" id="quote" style="--hm: 2" aria-labelledby="quote-h">
     <div class="wrap grid">
       <div class="span-5">
         <div class="section-head">
           <h2 id="quote-h">Get a quote for your site</h2>
           <p>Tell us about your business and which package looks right. We reply with a fixed price before any work starts.</p>
+          <ul class="contact-links contact-links--row">
+            <li><a class="link" href="tel:+61488852926">Call 0488 852 926</a></li>
+            <li><a class="link" href="https://wa.me/639202359482">WhatsApp or Viber +63 920 235 9482</a></li>
+          </ul>
         </div>
         <form class="form" action="mailto:hello@auzziewebsites.example" method="post" enctype="text/plain" data-endpoint="" data-sent="Your quote request is in. We will reply by email with a fixed price." novalidate>
           <div class="field"><label for="f-name">Your name</label>
@@ -325,7 +336,7 @@
           <div class="field"><label for="f-package">Package</label>
             <select id="f-package" name="package">
               <option>Not sure yet</option>
-              <option>Groundwork, $600</option>
+              <option>Groundwork, $699</option>
               <option>Framework, $999</option>
               <option>Full Build, $1,499</option>
             </select></div>
@@ -345,7 +356,7 @@
   <div class="wrap">
     <div class="closing__cta close--photo">
       <div class="section-head--split">
-        <div><h2 id="close-h">Get your trade found online</h2><p class="t-lead">Packages from $600 AUD, live in 7 to 14 days.</p></div>
+        <div><h2 id="close-h">Get your trade found online</h2><p class="t-lead">Packages from $699 AUD, live in 7 to 14 days.</p></div>
         <a class="btn btn--primary" href="#quote">Get a quote<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
       </div>
       <div class="close__media"><img src="assets/img/photo-f558878.jpg" width="1280" height="865" alt="A painter in white overalls on a ladder rolling paint onto a tall wall" loading="lazy" data-source="stand-in" data-subject="a painter at work"></div>
@@ -359,7 +370,7 @@
         <div class="span-2 footer__col"><h3>Packages</h3><ul><li><a href="#packages">Groundwork</a></li><li><a href="#packages">Framework</a></li><li><a href="#packages">Full Build</a></li></ul></div>
         <div class="span-2 footer__col"><h3>Services</h3><ul><li><a href="#services">What is included</a></li><li><a href="#work">Who we build for</a></li></ul></div>
         <div class="span-2 footer__col"><h3>Process</h3><ul><li><a href="#process">How a build goes</a></li><li><a href="#quote">Quote form</a></li></ul></div>
-        <div class="span-2 footer__col"><h3>Questions</h3><ul><li><a href="#questions">Common questions</a></li><li><a href="mailto:hello@auzziewebsites.example">Email</a></li></ul></div>
+        <div class="span-2 footer__col"><h3>Questions</h3><ul><li><a href="#questions">Common questions</a></li><li><a href="tel:+61488852926">0488 852 926</a></li><li><a href="https://wa.me/639202359482">WhatsApp / Viber +63 920 235 9482</a></li><li><a href="mailto:hello@auzziewebsites.example">Email</a></li></ul></div>
       </div>
       <div class="footer__legal">
         <span>&copy; 2026 Auzzie Websites</span>
