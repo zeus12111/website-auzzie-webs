@@ -1,0 +1,5 @@
+# build and check leftovers: not part of the website
+.taste-skill/
+.claude/
+shots/
+serve.mjs
