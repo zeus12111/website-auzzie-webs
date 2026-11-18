@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Auzzie Websites: websites for Australian small businesses</title>
-<meta name="description" content="Hand-coded, mobile-first sites that rank on Google and get quoted by AI search tools. Three fixed packages from $499 AUD, live in 7 to 14 days.">
+<title>Auzzie Websites: websites for Australian tradies</title>
+<meta name="description" content="Hand-coded, mobile-first sites for plumbers, sparkies, builders and other trades that rank on Google and get quoted by AI search. From $499 AUD.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Auzzie Websites: websites for Australian small businesses">
+<meta property="og:title" content="Auzzie Websites: websites for Australian tradies">
 <meta property="og:description" content="Hand-coded sites from $499 AUD that load fast on a phone and get found on Google and AI search.">
 <meta property="og:url" content="https://auzziewebsites.com/">
 <meta property="og:image" content="https://auzziewebsites.com/share.jpg">
@@ -29,7 +29,7 @@
      --p-action is navy, not the printed gold: gold on white is 2.6:1, under the 4.5:1 a button label and link need. -->
 <style>
 :root {
-  --p-bg: #ffffff; --p-surface: #f1f3f5; --p-ink: #0f2547; --p-muted: #5a6b84;
+  --p-bg: #ffffff; --p-surface: #faf3e2; --p-ink: #0f2547; --p-muted: #5a6b84;
   --p-accent: #c8900e; --p-accent-ink: #111111; --p-action: #0f2547; --p-action-ink: #ffffff;
   --p-inv-bg: #0f2547; --p-inv-surface: #1d3253; --p-inv-ink: #ffffff; --p-inv-muted: #9ba6b6;
   --p-inv-accent: #c8900e; --p-inv-accent-ink: #111111; --p-inv-action: #c8900e; --p-inv-action-ink: #111111;
@@ -45,6 +45,7 @@
 <link rel="modulepreload" href="assets/moments/moments.js">
 <link rel="modulepreload" href="assets/moments/lib.js">
 <link rel="modulepreload" href="assets/moments/photo-chapters/moment.js">
+<link rel="modulepreload" href="assets/moments/word-highlight/moment.js">
 <!-- page CSS: inside visuals only -->
 <style>
   .hero-photo { position: relative; overflow: hidden; }
@@ -63,6 +64,18 @@
   .nav__logo img { height: 44px; width: auto; }
   .footer__logo img { height: 64px; }
   .plan__badge { background: var(--accent); color: var(--accent-ink); }
+  /* colour: the logo's gold carries the second level of every navy band */
+  .hl { color: #9a6a00; }
+  .ground-inverse .muted { color: var(--p-inv-accent); }
+  #packages.ground-inverse .card--plan { background: var(--p-inv-surface); border-color: transparent; }
+  #packages.ground-inverse .card--plan.is-featured { border-color: var(--p-inv-accent); box-shadow: inset 0 0 0 1px var(--p-inv-accent); }
+  #packages.ground-inverse .card p, #packages.ground-inverse .checks li { color: var(--p-inv-ink); }
+  #packages.ground-inverse .plan__meta { color: var(--p-inv-muted); }
+  #packages.ground-inverse .tools li { color: var(--p-inv-ink); }
+  #packages.ground-inverse .tools .ic-ink { filter: invert(1); }
+  #packages.ground-inverse .checks li::before { background-color: var(--p-inv-accent); }
+  #statement .mo-wh__text strong { color: var(--p-inv-accent); }
+  .plan__badge { background: var(--p-inv-accent); color: var(--p-inv-accent-ink); }
   ::selection { background: var(--p-ink); color: var(--p-bg); }
   @media (max-width: 639px) {
     #work .panel { --p-h: 300px; }
@@ -81,8 +94,8 @@
 <body>
 <!-- type: service
      deal: hero split, nav nav-split, close close-photo, footer footer-columns, rhythm surface-pairs, buttons solid, mark dots, grounds none
-     palette oxblood-grey (placeholder: the client has no final colours), type onest
-     moments: photo-chapters in #process (the build told in three photographs) -->
+     palette from the client logo (navy #0f2547, gold #c8900e, warm surface), type onest; rhythm: two navy bands (statement, packages) and the dark footer
+     moments: word-highlight in #statement, photo-chapters in #process (the build told in three photographs) -->
 <header class="nav nav--split">
   <div class="wrap nav__bar">
     <a class="skip-link" href="#top">Skip to content</a>
@@ -92,17 +105,17 @@
         <div class="nav__menu">
           <div class="wrap grid">
             <a class="menu-card span-4" href="#packages">
-              <div class="panel"><img class="frame__img" src="assets/img/photo-f1613447-500.jpg" alt="An electrician kneeling beside a generator with tools and cables" loading="eager"></div>
+              <div class="panel"><img class="frame__img" src="assets/img/photo-f63507559-500.jpg" alt="A blocklayer laying concrete blocks on a wall" loading="eager"></div>
               <span class="t-card">Groundwork</span>
               <span class="t-small muted">Up to 3 pages, $499</span>
             </a>
             <a class="menu-card span-4" href="#packages">
-              <div class="panel"><img class="frame__img" src="assets/img/photo-f147407120-500.jpg" alt="Pastries and tarts with chalk price tags on a bakery counter" loading="eager"></div>
+              <div class="panel"><img class="frame__img" src="assets/img/photo-f191900053-500.jpg" alt="A gardener pushing a lawnmower past a hedge" loading="eager"></div>
               <span class="t-card">Framework</span>
               <span class="t-small muted">Up to 6 pages, $699</span>
             </a>
             <a class="menu-card span-4" href="#packages">
-              <div class="panel"><img class="frame__img" src="assets/img/photo-f194714982-500.jpg" alt="A carpenter's workshop with benches, ladders and tools" loading="eager"></div>
+              <div class="panel"><img class="frame__img" src="assets/img/photo-f200256728-500.jpg" alt="A welder in a mask with sparks flying" loading="eager"></div>
               <span class="t-card">Full Build</span>
               <span class="t-small muted">Up to 10 pages, $999</span>
             </a>
@@ -125,12 +138,12 @@
   <section class="hero hero--split" data-enter aria-labelledby="hero-h">
     <div class="wrap"><div class="hero-text grid hero__grid">
       <div class="hero__text span-5">
-        <h1 id="hero-h">Websites for Australian small businesses</h1>
-        <p class="hero__lead">We hand-code your site so it loads fast on a phone, ranks on Google and gets quoted by tools like ChatGPT. From $499 AUD, one-off.</p>
+        <h1 id="hero-h">Websites for Australian <span class="hl">tradies</span></h1>
+        <p class="hero__lead">For plumbers, sparkies, builders and every trade in between: a hand-coded site that loads fast on a phone and ranks on Google. From $499 AUD, one-off.</p>
         <div class="btn-row"><a class="btn btn--primary" href="#quote">Get a quote<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a><a class="btn btn--secondary" href="#packages">See the packages</a></div>
       </div>
       <div class="hero__media span-6 start-7">
-        <img src="assets/img/photo-f2284893-960.jpg" width="960" height="722" alt="A red-brick corner shop with arched windows on Enmore Road, Sydney" style="--ly-pos: 50% 50%" fetchpriority="high" data-source="stand-in" data-subject="local shopfronts">
+        <img src="assets/img/photo-f92665549-1280.jpg" width="1280" height="853" alt="An electrician in a hard hat and hi-vis vest wiring a panel from a scissor lift" style="--ly-pos: 72% 40%" fetchpriority="high" data-source="stand-in" data-subject="an electrician at work">
         <div class="ly-float">
           <div class="ly-float__row"><span class="ly-live">Groundwork</span><span>7-day build</span></div>
           <div class="ly-float__title">Up to 3 pages, mobile-first</div>
@@ -149,13 +162,19 @@
           <li><span class="rows__name">Custom, mobile-first design</span><p>Laid out for the phone first, where most of your customers find you.</p></li>
           <li><span class="rows__name">Hand-coded in Astro</span><p>Light pages with no theme or plugins, so they load fast on mobile data.</p></li>
           <li><span class="rows__name">Search basics and business schema</span><p>Titles, meta tags and headings, plus schema so Google and AI tools know who you are.</p></li>
-          <li><span class="rows__name">Contact form, click-to-call and map</span><p>A customer can ring you or find your door in one tap.</p></li>
+          <li><span class="rows__name">Contact form, click-to-call and map</span><p>A customer can ring you from the job site in one tap.</p></li>
           <li><span class="rows__name">Domain, SSL and hosting set up</span><p>Your sitemap goes to Google Search Console, and the website is yours.</p></li>
         </ul>
       </div>
       <div class="frame frame--photo span-6 start-7" style="aspect-ratio: 4 / 3">
-        <img class="frame__img" src="assets/img/photo-f51439363.jpg" width="1280" height="853" alt="A hand holding a phone beside a takeaway coffee cup" loading="lazy" data-source="stand-in" data-subject="a customer searching on a phone">
+        <img class="frame__img" src="assets/img/photo-f142516128.jpg" width="1280" height="853" alt="A plumber working on the pipes under a sink by torchlight" loading="lazy" data-source="stand-in" data-subject="a plumber at work">
       </div>
+    </div>
+  </section>
+
+  <section class="section statement ground-inverse" id="statement" data-moment="word-highlight" aria-label="Why tradies need a website">
+    <div class="wrap">
+      <p class="mo-wh__text">You are on the tools all day. Your website shows your work, puts your number one tap away and takes the <strong>quote request</strong> while you are still on site.</p>
     </div>
   </section>
 
@@ -164,17 +183,17 @@
       <div class="mo-ph__head"><h2 id="process-h">Three steps from brief to launch</h2><p>One fixed price, agreed before we start. Your site is live in 7, 10 or 14 days, depending on the package.</p></div>
       <ol class="mo-ph__list">
         <li class="mo-ph__ch">
-          <figure class="mo-ph__pic"><img src="assets/img/photo-f61681597.jpg" alt="A notebook, pencil and coffee mug beside a laptop on a white desk" width="1280" height="853"></figure>
+          <figure class="mo-ph__pic"><img src="assets/img/photo-f50708061.jpg" alt="Hands in an orange work glove wiring a wall socket" width="1280" height="960"></figure>
           <h3>Plan the pages</h3>
-          <p>You tell us what you sell and where. We pick the pages and, on Framework and up, the keywords to target.</p>
+          <p>You tell us your trade and the suburbs you cover. We pick the pages and, on Framework and up, the keywords to target.</p>
         </li>
         <li class="mo-ph__ch">
-          <figure class="mo-ph__pic"><img src="assets/img/photo-f195683968.jpg" alt="A person checking a phone while sitting at an open laptop" width="1280" height="853"></figure>
+          <figure class="mo-ph__pic"><img src="assets/img/photo-f149877636.jpg" alt="A carpenter standing on new roof framing above a brick chimney" width="1280" height="853"></figure>
           <h3>Design and code it</h3>
           <p>We design for the phone first and code every page by hand. You get one to three rounds of revisions.</p>
         </li>
         <li class="mo-ph__ch">
-          <figure class="mo-ph__pic"><img src="assets/img/photo-f3281579-1280.jpg" alt="Victorian shopfronts with iron-lace balconies on King Street, Newtown, in Sydney" width="1280" height="962"></figure>
+          <figure class="mo-ph__pic"><img src="assets/img/photo-f153635421.jpg" alt="Two painters in hi-vis abseiling down the glass face of an office building" width="1280" height="960"></figure>
           <h3>Launch and get found</h3>
           <p>We connect your domain and hosting, then submit your sitemap to Google Search Console.</p>
         </li>
@@ -182,7 +201,7 @@
     </div>
   </section>
 
-  <section class="section ground-surface" id="packages" style="--hm: 2" aria-labelledby="packages-h">
+  <section class="section ground-inverse" id="packages" style="--hm: 2" aria-labelledby="packages-h">
     <div class="wrap">
       <div class="section-head--split">
         <h2 id="packages-h">Three packages. <span class="muted">One-off prices in Australian dollars.</span></h2>
@@ -241,26 +260,26 @@
     </div>
   </section>
 
-  <section class="section" id="work" style="--hm: 2" aria-labelledby="work-h">
+  <section class="section ground-surface" id="work" style="--hm: 2" aria-labelledby="work-h">
     <div class="wrap">
       <div class="section-head">
-        <h2 id="work-h">Built for trades, cafes and shops. <span class="muted">Each page is made for the customer on a phone.</span></h2>
+        <h2 id="work-h">Built for every trade. <span class="muted">Each page is made for the customer on a phone.</span></h2>
       </div>
       <div class="grid">
         <article class="card card--row card--open span-4">
-          <h3>Websites for trades</h3>
-          <p>Click-to-call on every page, and suburb pages for the areas you cover.</p>
-          <div class="panel"><img class="frame__img" src="assets/img/photo-f1613447-960.jpg" width="960" height="722" alt="An electrician kneeling beside a generator with tools and cables" loading="lazy" data-source="stand-in" data-subject="a tradesperson at work"></div>
+          <h3>Websites for builders</h3>
+          <p>Show finished jobs, and add suburb pages for the areas you build in.</p>
+          <div class="panel"><img class="frame__img" src="assets/img/photo-f63507559.jpg" width="1280" height="853" alt="A blocklayer laying concrete blocks on a wall" loading="lazy" data-source="stand-in" data-subject="a builder at work"></div>
         </article>
         <article class="card card--row card--open span-4">
-          <h3>Websites for cafes</h3>
-          <p>Prices, opening hours and a Google Map that read well on a small screen.</p>
-          <div class="panel"><img class="frame__img" src="assets/img/photo-f147407120-960.jpg" width="960" height="722" alt="Pastries and tarts with chalk price tags on a bakery counter" loading="lazy" data-source="stand-in" data-subject="a cafe counter"></div>
+          <h3>Websites for landscapers</h3>
+          <p>Services, the areas you mow and a quote form that reads well on a phone.</p>
+          <div class="panel"><img class="frame__img" src="assets/img/photo-f191900053-960.jpg" width="960" height="640" alt="A gardener pushing a lawnmower past a hedge" loading="lazy" data-source="stand-in" data-subject="a landscaper at work"></div>
         </article>
         <article class="card card--row card--open span-4">
-          <h3>Websites for workshops</h3>
+          <h3>Websites for welders</h3>
           <p>Online booking or a lead form on Full Build, sent straight to your inbox.</p>
-          <div class="panel"><img class="frame__img" src="assets/img/photo-f194714982-960.jpg" width="960" height="640" alt="A carpenter's workshop with benches, ladders and tools" loading="lazy" data-source="stand-in" data-subject="a workshop"></div>
+          <div class="panel"><img class="frame__img" src="assets/img/photo-f200256728.jpg" width="1280" height="853" alt="A welder in a mask with sparks flying" loading="lazy" data-source="stand-in" data-subject="a welder at work"></div>
         </article>
       </div>
     </div>
@@ -297,9 +316,9 @@
           <div class="field"><label for="f-email">Email</label>
             <input id="f-email" name="email" type="email" autocomplete="email" inputmode="email" required aria-describedby="f-email-err">
             <p class="field__error" id="f-email-err" hidden>Write an email address with an @, like name@example.com.</p></div>
-          <div class="field"><label for="f-business">Business and suburb</label>
+          <div class="field"><label for="f-business">Trade and suburb</label>
             <input id="f-business" name="business" type="text" autocomplete="organization" required aria-describedby="f-business-err">
-            <p class="field__error" id="f-business-err" hidden>Write what your business does and where, like “Plumber in Penrith”.</p></div>
+            <p class="field__error" id="f-business-err" hidden>Write your trade and where you work, like “Plumber in Penrith”.</p></div>
           <div class="field"><label for="f-package">Package</label>
             <select id="f-package" name="package">
               <option>Not sure yet</option>
@@ -313,7 +332,7 @@
         </form>
       </div>
       <div class="frame frame--photo quote__photo span-6 start-7">
-        <img class="frame__img" src="assets/img/photo-f40608941.jpg" width="1280" height="848" alt="A baker serving behind a counter stacked with loaves" loading="lazy" data-source="stand-in" data-subject="a small business owner at work">
+        <img class="frame__img" src="assets/img/photo-f110155358.jpg" width="1280" height="960" alt="An electrician in a cap and hi-vis vest fixing a power meter" loading="lazy" data-source="stand-in" data-subject="an electrician at work">
       </div>
     </div>
   </section>
@@ -323,16 +342,16 @@
   <div class="wrap">
     <div class="closing__cta close--photo">
       <div class="section-head--split">
-        <div><h2 id="close-h">Get your business found online</h2><p class="t-lead">Packages from $499 AUD, live in 7 to 14 days.</p></div>
+        <div><h2 id="close-h">Get your trade found online</h2><p class="t-lead">Packages from $499 AUD, live in 7 to 14 days.</p></div>
         <a class="btn btn--primary" href="#quote">Get a quote<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
       </div>
-      <div class="close__media"><img src="assets/img/photo-f155630186-960.jpg" width="960" height="636" alt="Crates of apples, pears, broccoli and onions with chalk price tags at a greengrocer" loading="lazy" data-source="stand-in" data-subject="a greengrocer's display"></div>
+      <div class="close__media"><img src="assets/img/photo-f558878.jpg" width="1280" height="865" alt="A painter in white overalls on a ladder rolling paint onto a tall wall" loading="lazy" data-source="stand-in" data-subject="a painter at work"></div>
     </div>
     <div class="closing__links">
       <div class="grid">
         <div class="span-4 stack-4">
           <a class="nav__logo footer__logo" href="#top"><img src="assets/logo.webp" alt="Auzzie Websites" width="2000" height="667"></a>
-          <p class="footer__lede">Fast sites, found on Google and AI search.</p>
+          <p class="footer__lede">Fast sites for tradies, found on Google and AI search.</p>
         </div>
         <div class="span-2 footer__col"><h3>Packages</h3><ul><li><a href="#packages">Groundwork</a></li><li><a href="#packages">Framework</a></li><li><a href="#packages">Full Build</a></li></ul></div>
         <div class="span-2 footer__col"><h3>Services</h3><ul><li><a href="#services">What is included</a></li><li><a href="#work">Who we build for</a></li></ul></div>

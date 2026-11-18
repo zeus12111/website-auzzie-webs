@@ -6,13 +6,14 @@
 <title>Auzzie Websites: photograph credits</title>
 <meta name="description" content="The photographers, licences and source pages of the photographs on the Auzzie Websites website.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Auzzie Websites: websites for Australian small businesses">
+<meta property="og:title" content="Auzzie Websites: websites for Australian tradies">
 <meta property="og:description" content="Hand-coded sites from $499 AUD that load fast on a phone and get found on Google and AI search.">
-<meta property="og:image" content="share.jpg">
+<meta property="og:url" content="https://auzziewebsites.com/">
+<meta property="og:image" content="https://auzziewebsites.com/share.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<meta name="theme-color" content="#e2e2e2">
-<!-- <link rel="canonical" href="https://[the client's domain]/"> -->
+<meta name="theme-color" content="#ffffff">
+<link rel="canonical" href="https://auzziewebsites.com/">
 <meta name="site-kind" content="other">
 <meta name="page-type" content="service">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,13 +25,14 @@
 <link rel="stylesheet" href="assets/backgrounds/backgrounds.css">
 <link rel="stylesheet" href="assets/layout/layout.css">
 <link rel="stylesheet" href="assets/icons/icon.css">
-<!-- Placeholder palette (dealt: oxblood-grey). Colours are not final: swap the --p-* values here once the brand is set. -->
+<!-- Palette from the client's logo (start.mjs brand: bg #ffffff, ink #0f2547, accent #c8900e).
+     --p-action is navy, not the printed gold: gold on white is 2.6:1, under the 4.5:1 a button label and link need. -->
 <style>
 :root {
-  --p-bg: #e2e2e2; --p-surface: #d6d6d6; --p-ink: #7d0c14; --p-muted: #7a4a4e;
-  --p-accent: #7d0c14; --p-accent-ink: #e2e2e2; --p-action: #7d0c14; --p-action-ink: #e2e2e2;
-  --p-inv-bg: #7d0c14; --p-inv-surface: #862323; --p-inv-ink: #e2e2e2; --p-inv-muted: #d0b3af;
-  --p-inv-accent: #e2e2e2; --p-inv-accent-ink: #7d0c14; --p-inv-action: #e2e2e2; --p-inv-action-ink: #7d0c14;
+  --p-bg: #ffffff; --p-surface: #faf3e2; --p-ink: #0f2547; --p-muted: #5a6b84;
+  --p-accent: #c8900e; --p-accent-ink: #111111; --p-action: #0f2547; --p-action-ink: #ffffff;
+  --p-inv-bg: #0f2547; --p-inv-surface: #1d3253; --p-inv-ink: #ffffff; --p-inv-muted: #9ba6b6;
+  --p-inv-accent: #c8900e; --p-inv-accent-ink: #111111; --p-inv-action: #c8900e; --p-inv-action-ink: #111111;
   --font-display: "Onest", system-ui, sans-serif;
   --font-text: "Onest", system-ui, sans-serif;
   --display-weight: 400;
@@ -43,28 +45,57 @@
 <link rel="modulepreload" href="assets/moments/moments.js">
 <link rel="modulepreload" href="assets/moments/lib.js">
 <link rel="modulepreload" href="assets/moments/photo-chapters/moment.js">
+<link rel="modulepreload" href="assets/moments/word-highlight/moment.js">
 <!-- page CSS: inside visuals only -->
 <style>
   .hero-photo { position: relative; overflow: hidden; }
   #work .panel { --p-h: 320px; }
-  #work .card p { color: var(--ink); }
+  #work .card p, #packages .card p { color: var(--ink); }
+  .quote__photo { aspect-ratio: 1 / 1; }
+  @media (max-width: 1023px) { .quote__photo { aspect-ratio: 4 / 3; margin-top: var(--s-7); } }
   .plan__meta { color: var(--muted); font-size: var(--t-small); }
   .plan__gift { padding-top: var(--s-4); border-top: 1px solid var(--line); }
   #quote .form { margin-top: var(--s-6); }
   #packages .card--plan { position: relative; }
   .plan__badge { position: absolute; top: var(--s-5); right: var(--s-5); }
-  .tools { display: flex; flex-wrap: wrap; gap: var(--s-3) var(--s-5); list-style: none; margin: 0; padding: 0; align-self: end; }
+  .tools { margin-top: var(--s-5) !important; display: flex; flex-wrap: wrap; gap: var(--s-3) var(--s-5); list-style: none; margin: 0; padding: 0; align-self: end; }
   .tools li { display: flex; align-items: center; gap: var(--s-2); font-size: var(--t-small); font-weight: 500; }
   .tools .ic { width: 28px; height: 28px; }
+  .nav__logo img { height: 44px; width: auto; }
+  .footer__logo img { height: 64px; }
+  .plan__badge { background: var(--accent); color: var(--accent-ink); }
+  /* colour: the logo's gold carries the second level of every navy band */
+  .hl { color: #9a6a00; }
+  .ground-inverse .muted { color: var(--p-inv-accent); }
+  #packages.ground-inverse .card--plan { background: var(--p-inv-surface); border-color: transparent; }
+  #packages.ground-inverse .card--plan.is-featured { border-color: var(--p-inv-accent); box-shadow: inset 0 0 0 1px var(--p-inv-accent); }
+  #packages.ground-inverse .card p, #packages.ground-inverse .checks li { color: var(--p-inv-ink); }
+  #packages.ground-inverse .plan__meta { color: var(--p-inv-muted); }
+  #packages.ground-inverse .tools li { color: var(--p-inv-ink); }
+  #packages.ground-inverse .tools .ic-ink { filter: invert(1); }
+  #packages.ground-inverse .checks li::before { background-color: var(--p-inv-accent); }
+  #statement .mo-wh__text strong { color: var(--p-inv-accent); }
+  .plan__badge { background: var(--p-inv-accent); color: var(--p-inv-accent-ink); }
   ::selection { background: var(--p-ink); color: var(--p-bg); }
-  @media (max-width: 639px) { #work .panel { --p-h: 220px; } }
+  @media (max-width: 639px) {
+    #work .panel { --p-h: 300px; }
+    .nav__logo img { height: 36px; }
+    #packages .section-head--split { gap: var(--s-4); }
+    #packages .tools { margin-top: 0 !important; gap: var(--s-2) var(--s-4); }
+    #packages .grid { gap: var(--s-3); }
+    #packages .card--plan { padding: var(--s-5); gap: var(--s-2); }
+    #packages .checks { gap: var(--s-2); margin-top: 0; }
+    #packages .price .t-stat { font-size: 32px; }
+    #packages .tools li { font-size: 0; gap: 0; }
+    #packages .tools { gap: var(--s-5); }
+  }
 </style>
 </head>
 <body>
 <!-- type: service
      deal: hero split, nav nav-split, close close-photo, footer footer-columns, rhythm surface-pairs, buttons solid, mark dots, grounds none
-     palette oxblood-grey (placeholder: the client has no final colours), type onest
-     moments: photo-chapters in #process (the build told in three photographs) -->
+     palette from the client logo (navy #0f2547, gold #c8900e, warm surface), type onest; rhythm: two navy bands (statement, packages) and the dark footer
+     moments: word-highlight in #statement, photo-chapters in #process (the build told in three photographs) -->
 <header class="nav nav--split">
   <div class="wrap nav__bar">
     <a class="skip-link" href="#top">Skip to content</a>
@@ -74,17 +105,17 @@
         <div class="nav__menu">
           <div class="wrap grid">
             <a class="menu-card span-4" href="#packages">
-              <div class="panel"><img class="frame__img" src="assets/img/photo-f1613447-500.jpg" alt="An electrician kneeling beside a generator with tools and cables" loading="eager"></div>
+              <div class="panel"><img class="frame__img" src="assets/img/photo-f63507559-500.jpg" alt="A blocklayer laying concrete blocks on a wall" loading="eager"></div>
               <span class="t-card">Groundwork</span>
               <span class="t-small muted">Up to 3 pages, $499</span>
             </a>
             <a class="menu-card span-4" href="#packages">
-              <div class="panel"><img class="frame__img" src="assets/img/photo-f147407120-500.jpg" alt="Pastries and tarts with chalk price tags on a bakery counter" loading="eager"></div>
+              <div class="panel"><img class="frame__img" src="assets/img/photo-f191900053-500.jpg" alt="A gardener pushing a lawnmower past a hedge" loading="eager"></div>
               <span class="t-card">Framework</span>
               <span class="t-small muted">Up to 6 pages, $699</span>
             </a>
             <a class="menu-card span-4" href="#packages">
-              <div class="panel"><img class="frame__img" src="assets/img/photo-f194714982-500.jpg" alt="A carpenter's workshop with benches, ladders and tools" loading="eager"></div>
+              <div class="panel"><img class="frame__img" src="assets/img/photo-f200256728-500.jpg" alt="A welder in a mask with sparks flying" loading="eager"></div>
               <span class="t-card">Full Build</span>
               <span class="t-small muted">Up to 10 pages, $999</span>
             </a>
@@ -95,7 +126,7 @@
       <div class="nav__item"><a class="nav__link" href="#process">Process</a></div>
       <div class="nav__item"><a class="nav__link" href="#questions">Questions</a></div>
     </nav>
-    <a class="nav__logo" href="#top"><span class="mark" data-mark="dots" aria-hidden="true"></span>Auzzie Websites</a>
+    <a class="nav__logo" href="#top"><img src="assets/logo.webp" alt="Auzzie Websites" width="2000" height="667"></a>
     <div class="nav__actions">
       <a class="btn btn--primary" href="#quote">Get a quote</a>
     </div>
@@ -108,16 +139,16 @@
   <section class="credits-list" id="credits" aria-labelledby="credits-h">
     <h1 id="credits-h">Photograph credits</h1>
     <ul>
-      <li><a href="https://commons.wikimedia.org/wiki/File:Newtown_King_Street_shops.JPG">J Bar</a>, <a href="https://creativecommons.org/licenses/by/3.0">CC BY 3.0</a></li>
-      <li><a href="https://commons.wikimedia.org/wiki/File:Hands-coffee-smartphone-technology_(23698591814).jpg">www.Pixel.la Free Stock Photos</a>, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li>
-      <li><a href="https://commons.wikimedia.org/wiki/File:Bakery_products_on_the_counter_of_Jacob%27s_Bakery_%2B_Cafe_2024-04-15.jpg">Andy Li</a>, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li>
-      <li><a href="https://commons.wikimedia.org/wiki/File:Electrician_Working.jpg">photo taken by flickr user editor B</a>, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li>
-      <li><a href="https://commons.wikimedia.org/wiki/File:Carpenter%27s_workshop.jpg">Shixart1985</a>, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li>
-      <li><a href="https://commons.wikimedia.org/wiki/File:Ruler_and_laptop_on_a_desk_(Unsplash).jpg">Oli Dale olidale</a>, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li>
-      <li><a href="https://commons.wikimedia.org/wiki/File:Businessman_holds_smartphone_while_sitting_with_a_laptop_closeup.jpg">Shixart1985</a>, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li>
-      <li><a href="https://commons.wikimedia.org/wiki/File:Bakery_sales_counter_in_Paris.jpg">THOR</a>, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li>
-      <li><a href="https://commons.wikimedia.org/wiki/File:02024_1708_greengrocer.jpg">Silar</a>, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li>
-      <li><a href="https://commons.wikimedia.org/wiki/File:Newtown_Enmore_Road.JPG">J Bar</a>, <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></li>
+      <li><a href="https://commons.wikimedia.org/wiki/File:Electrician_-_Flickr_-_garryknight.jpg">Garry Knight from London, England</a>, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li>
+      <li><a href="https://commons.wikimedia.org/wiki/File:Plumber_at_work_2010_USA.jpg">ocean yamaha</a>, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li>
+      <li><a href="https://commons.wikimedia.org/wiki/File:Electrician_installing_socket.jpg">Santeri Viinamäki</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li>
+      <li><a href="https://commons.wikimedia.org/wiki/File:2024-04-30_Carpenter_at_work_DSC_0205.JPG">Bärbel Miemietz</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li>
+      <li><a href="https://commons.wikimedia.org/wiki/File:Construction_workers_abseiling_on_Civic_Heart,_South_Perth,_October_2024_01.jpg">Calistemon</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li>
+      <li><a href="https://commons.wikimedia.org/wiki/File:Kazi_Kazi_means_(_work_work).jpg">Ash Gallery</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li>
+      <li><a href="https://commons.wikimedia.org/wiki/File:Man_mowing_the_lawn_in_a_suburban_garden.jpg">Shixart1985</a>, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li>
+      <li><a href="https://commons.wikimedia.org/wiki/File:Welder_welding_Flickr.jpg">Julian Carvajal</a>, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></li>
+      <li><a href="https://commons.wikimedia.org/wiki/File:Electricians_fixing_electricity_meter_5.jpg">Jeromi Mikhael</a>, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></li>
+      <li><a href="https://commons.wikimedia.org/wiki/File:Modern-Trade-Painter.jpg">Lukeroberts</a>, <a href="https://creativecommons.org/licenses/by-sa/2.5">CC BY-SA 2.5</a></li>
     </ul>
   </section>
 </main>
@@ -126,16 +157,16 @@
   <div class="wrap">
     <div class="closing__cta close--photo">
       <div class="section-head--split">
-        <div><h2 id="close-h">Get your business found online</h2><p class="t-lead">Packages from $499 AUD, live in 7 to 14 days.</p></div>
+        <div><h2 id="close-h">Get your trade found online</h2><p class="t-lead">Packages from $499 AUD, live in 7 to 14 days.</p></div>
         <a class="btn btn--primary" href="#quote">Get a quote<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
       </div>
-      <div class="close__media"><img src="assets/img/photo-f155630186-960.jpg" width="960" height="636" alt="Crates of apples, pears, broccoli and onions with chalk price tags at a greengrocer" loading="lazy" data-source="stand-in" data-subject="a greengrocer's display"></div>
+      <div class="close__media"><img src="assets/img/photo-f558878.jpg" width="1280" height="865" alt="A painter in white overalls on a ladder rolling paint onto a tall wall" loading="lazy" data-source="stand-in" data-subject="a painter at work"></div>
     </div>
     <div class="closing__links">
       <div class="grid">
         <div class="span-4 stack-4">
-          <a class="nav__logo" href="#top"><span class="mark" data-mark="dots" aria-hidden="true"></span>Auzzie Websites</a>
-          <p class="footer__lede">Fast sites, found on Google and AI search.</p>
+          <a class="nav__logo footer__logo" href="#top"><img src="assets/logo.webp" alt="Auzzie Websites" width="2000" height="667"></a>
+          <p class="footer__lede">Fast sites for tradies, found on Google and AI search.</p>
         </div>
         <div class="span-2 footer__col"><h3>Packages</h3><ul><li><a href="#packages">Groundwork</a></li><li><a href="#packages">Framework</a></li><li><a href="#packages">Full Build</a></li></ul></div>
         <div class="span-2 footer__col"><h3>Services</h3><ul><li><a href="#services">What is included</a></li><li><a href="#work">Who we build for</a></li></ul></div>
