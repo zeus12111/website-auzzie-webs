@@ -81,6 +81,20 @@
   .contact-links--row { display: flex; flex-wrap: wrap; gap: 0 var(--s-6); margin-top: var(--s-4); }
   /* the team photo is a cut-out on white: it stands on the white page, no frame */
   .team-cutout { display: block; width: 100%; height: auto; margin-top: var(--s-6); }
+  /* reviews: quotes in a two-up grid beside the results */
+  .reviews { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-4) 24px; align-content: start; }
+  .review { margin: 0; padding: var(--s-5); border-radius: var(--r-lg); background: var(--p-surface); border-top: 3px solid var(--p-accent); display: grid; gap: var(--s-3); align-content: space-between; }
+  .review blockquote { margin: 0; font-size: var(--t-body); line-height: 1.5; color: var(--ink); }
+  .review blockquote { quotes: none; }
+  .review figcaption { font-size: var(--t-small); color: var(--muted); }
+  .results { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; align-content: start; }
+  .results li { display: grid; grid-template-columns: 40px 1fr; gap: var(--s-4); align-items: start; padding: var(--s-5) 0; border-bottom: 1px solid var(--line); }
+  .results li:first-child { padding-top: 0; }
+  .results .ic { width: 40px; height: 40px; }
+  .results p { margin: 0; color: var(--ink); line-height: 1.5; }
+  .results strong { font-weight: 600; color: var(--ink); }
+  @media (max-width: 1023px) { .results { margin-top: var(--s-7); } }
+  @media (max-width: 639px) { .reviews { grid-template-columns: 1fr; gap: var(--s-2); } .review { padding: var(--s-4); } }
   ::selection { background: var(--p-ink); color: var(--p-bg); }
   @media (max-width: 639px) {
     #work .panel { --p-h: 300px; }
@@ -268,6 +282,30 @@
     </div>
   </section>
 
+  <section class="section" id="reviews" style="--hm: 2" aria-labelledby="reviews-h">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="reviews-h">What our clients say. <span class="muted">Real feedback and results from real businesses.</span></h2>
+      </div>
+      <div class="grid">
+        <div class="reviews span-8">
+          <figure class="review"><blockquote>“The website is super beautiful, what a great job. Thank you.”</blockquote><figcaption>A client</figcaption></figure>
+          <figure class="review"><blockquote>“We did not expect it to be so quick. We can’t feed you if you’re that quick. Amazing and thanks!”</blockquote><figcaption>A client</figcaption></figure>
+          <figure class="review"><blockquote>“Whoah, the numbers are going up! Nice work guys.”</blockquote><figcaption>A client</figcaption></figure>
+          <figure class="review"><blockquote>“I got customers telling me that the team doing our promotion are doing a very good job.”</blockquote><figcaption>A client</figcaption></figure>
+          <figure class="review"><blockquote>“Nice, never heard of Trustpilot after we posted 21x in 1 month, with 1 post gaining 7,600 views.”</blockquote><figcaption>A client</figcaption></figure>
+          <figure class="review"><blockquote>“Perfect work, 5 stars. Thank you.”</blockquote><figcaption>A client</figcaption></figure>
+        </div>
+        <ul class="results span-4 start-9" aria-label="Results for clients">
+          <li><img class="ic" src="assets/icons/google-icon.svg" alt="Google" width="40" height="40"><p>One restaurant showed at the <strong>top of Google AI search results</strong> for top fine dining and top romantic restaurant in its area, <strong>after 3 weeks</strong> of Generative Engine Optimisation.</p></li>
+          <li><img class="ic" src="assets/icons/linkedin-icon.svg" alt="LinkedIn" width="40" height="40"><p>One client grew from <strong>700 to 6,000</strong> industry-specific LinkedIn followers in <strong>7 months</strong>.</p></li>
+          <li><img class="ic ic-ink" src="assets/icons/instagram-icon.svg" alt="Instagram" width="40" height="40"><p>One company grew from <strong>0 to 500</strong> industry and location-specific Instagram followers in <strong>1 month</strong>.</p></li>
+          <li><img class="ic" src="assets/icons/reddit-icon.svg" alt="Reddit" width="40" height="40"><p>One client gained <strong>112k views</strong> on Reddit for their business.</p></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
   <section class="section ground-surface" id="work" style="--hm: 2" aria-labelledby="work-h">
     <div class="wrap">
       <div class="section-head">
@@ -371,7 +409,7 @@
           <p class="footer__lede">Fast sites for tradies, found on Google and AI search.</p>
         </div>
         <div class="span-2 footer__col"><h3>Packages</h3><ul><li><a href="#packages">Groundwork</a></li><li><a href="#packages">Framework</a></li><li><a href="#packages">Full Build</a></li></ul></div>
-        <div class="span-2 footer__col"><h3>Services</h3><ul><li><a href="#services">What is included</a></li><li><a href="#work">Who we build for</a></li></ul></div>
+        <div class="span-2 footer__col"><h3>Services</h3><ul><li><a href="#services">What is included</a></li><li><a href="#work">Who we build for</a></li><li><a href="#reviews">Client reviews</a></li></ul></div>
         <div class="span-2 footer__col"><h3>Process</h3><ul><li><a href="#process">How a build goes</a></li><li><a href="#quote">Quote form</a></li></ul></div>
         <div class="span-2 footer__col"><h3>Questions</h3><ul><li><a href="#questions">Common questions</a></li><li><a href="tel:+61488852926">0488 852 926</a></li><li><a href="https://wa.me/639202359482">WhatsApp / Viber +63 920 235 9482</a></li><li><a href="mailto:hello@auzziewebsites.example">Email</a></li></ul></div>
       </div>
