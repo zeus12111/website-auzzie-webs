@@ -79,6 +79,8 @@
   .contact-links { display: grid; gap: var(--s-3); list-style: none; margin: 0; padding: 0; }
   .contact-links a { display: inline-flex; align-items: center; min-height: 44px; }
   .contact-links--row { display: flex; flex-wrap: wrap; gap: 0 var(--s-6); margin-top: var(--s-4); }
+  /* the team photo is a cut-out on white: it stands on the white page, no frame */
+  .team-cutout { display: block; width: 100%; height: auto; margin-top: var(--s-6); }
   ::selection { background: var(--p-ink); color: var(--p-bg); }
   @media (max-width: 639px) {
     #work .panel { --p-h: 300px; }
@@ -108,7 +110,7 @@
         <div class="nav__menu">
           <div class="wrap grid">
             <a class="menu-card span-4" href="#packages">
-              <div class="panel"><img class="frame__img" src="assets/img/photo-f63507559-500.jpg" alt="A blocklayer laying concrete blocks on a wall" loading="eager"></div>
+              <div class="panel"><img class="frame__img" src="assets/img/tradie-crew-hivis.png" alt="Six tradies in hi-vis workwear standing on a building site with their tools" loading="eager"></div>
               <span class="t-card">Groundwork</span>
               <span class="t-small muted">Up to 3 pages, $699</span>
             </a>
@@ -170,7 +172,7 @@
         </ul>
       </div>
       <div class="frame frame--photo span-6 start-7" style="aspect-ratio: 4 / 3">
-        <img class="frame__img" src="assets/img/photo-f142516128.jpg" width="1280" height="853" alt="A plumber working on the pipes under a sink by torchlight" loading="lazy" data-source="stand-in" data-subject="a plumber at work">
+        <img class="frame__img" src="assets/img/tradie-call-laptop.webp" width="1000" height="667" alt="A tradesman in his workshop on the phone, looking at his laptop" loading="lazy" data-source="client" data-subject="a tradie taking a call">
       </div>
     </div>
   </section>
@@ -275,7 +277,7 @@
         <article class="card card--row card--open span-4">
           <h3>Websites for builders</h3>
           <p>Show finished jobs, and add suburb pages for the areas you build in.</p>
-          <div class="panel"><img class="frame__img" src="assets/img/photo-f63507559.jpg" width="1280" height="853" alt="A blocklayer laying concrete blocks on a wall" loading="lazy" data-source="stand-in" data-subject="a builder at work"></div>
+          <div class="panel"><img class="frame__img" src="assets/img/tradie-crew-hivis.png" width="676" height="452" alt="Six tradies in hi-vis workwear standing on a building site with their tools" loading="lazy" data-source="client" data-subject="a building crew" style="object-position: 50% 30%"></div>
         </article>
         <article class="card card--row card--open span-4">
           <h3>Websites for landscapers</h3>
@@ -301,6 +303,7 @@
           <li><a class="link" href="https://wa.me/639202359482">WhatsApp or Viber +63 920 235 9482</a></li>
           <li><a class="link" href="mailto:hello@auzziewebsites.example">Email us</a></li>
         </ul>
+        <img class="team-cutout" src="assets/img/tradie-team-white.webp" width="1000" height="450" alt="Eight smiling tradespeople in hard hats and work gear with their tools" loading="lazy" data-source="client" data-subject="a team of tradies">
       </div>
       <div class="faq span-6 start-7">
         <div class="faq__item"><h3>Do I own the website?</h3><p>Yes. Every package is yours to keep, with no template licence or platform you are locked into.</p></div>
@@ -346,7 +349,7 @@
         </form>
       </div>
       <div class="frame frame--photo quote__photo span-6 start-7">
-        <img class="frame__img" src="assets/img/photo-f110155358.jpg" width="1280" height="960" alt="An electrician in a cap and hi-vis vest fixing a power meter" loading="lazy" data-source="stand-in" data-subject="an electrician at work">
+        <img class="frame__img" src="assets/img/tradie-call-tablet.webp" width="900" height="602" alt="A tradesman at his workbench on the phone, checking a tablet" loading="lazy" data-source="client" data-subject="a tradie booking a job" style="object-position: 60% 50%">
       </div>
     </div>
   </section>
@@ -359,7 +362,7 @@
         <div><h2 id="close-h">Get your trade found online</h2><p class="t-lead">Packages from $699 AUD, live in 7 to 14 days.</p></div>
         <a class="btn btn--primary" href="#quote">Get a quote<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
       </div>
-      <div class="close__media"><img src="assets/img/photo-f558878.jpg" width="1280" height="865" alt="A painter in white overalls on a ladder rolling paint onto a tall wall" loading="lazy" data-source="stand-in" data-subject="a painter at work"></div>
+      <div class="close__media" style="--pos: 50% 12%"><img src="assets/img/photo-f558878.jpg" width="1280" height="865" alt="A painter in white overalls on a ladder rolling paint onto a tall wall" loading="lazy" data-source="stand-in" data-subject="a painter at work"></div>
     </div>
     <div class="closing__links">
       <div class="grid">
